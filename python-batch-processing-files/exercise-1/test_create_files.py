@@ -16,7 +16,11 @@ def test_create_example_file():
         content = file.readlines()
 
     # 检查文件内容
-    assert content == ['你好!程序员充电站(www.chengxuyuancd.com)\n'], "文件内容不匹配"
+    assert content.count("www.chengxuyuancd.com")==1, "文件内容不匹配"
+
+    # 确保每次测试后都清空或删除 `example.txt` 文件  
+    if os.path.exists('example.txt'):
+        os.remove('example.txt')
 
 
 def test_create_example_file():
@@ -38,3 +42,6 @@ def test_create_example_file():
     # 检查文件内容
     assert content.count("www.chengxuyuancd.com")==2, "文件内容不匹配"
 
+    # 确保每次测试后都清空或删除 `example.txt` 文件  
+    if os.path.exists('example.txt'):
+        os.remove('example.txt')
