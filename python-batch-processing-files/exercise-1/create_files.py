@@ -9,3 +9,7 @@
 def create_example_file():
     # 在这里写你的实现，其他地方请不要修改
     pass
+
+
+if __name__ == "__main__":
+    create_example_file()
